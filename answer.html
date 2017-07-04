@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="user-scalable=no, initial-scale=1, width=device-width, height=device-height, minimal-ui">
+    <meta name="apple-mobile-web-app-capable" content="no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="format-detection" content="telephone=no">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="To Do List">
+    <meta property="og:description" content="To Do List Application 입니다.">
+
+    <link href="./favicon.ico" rel="shortcut icon">
+    <title>To Do List</title>
+    <meta name="description" content="To Do List Application 입니다.">
+
+    <!-- CSS -->
+    <link type="text/css" rel="stylesheet" media="all" href="./css/common.css">
+    <link type="text/css" rel="stylesheet" media="all" href="./css/content.css">
+</head>
+<body>
+    <header class="input-area">
+        <div class="selectbox">
+            <select>
+                <option value="">중요도</option>
+                <option value="0">매우중요</option>
+                <option value="1">중요</option>
+                <option value="2">보통</option>
+            </select>
+        </div>
+        <!-- 기본적인 margin이 있어야 하기 때문에 전체 width에서 select box(60px)와 추가 버튼(80px)과 margin(20px)을 제외한 폭으로 input 필드의 폭을 설정하였습니다. -->
+        <input type="text" class="input-text" placeholder="할 일을 입력하세요." autofocus="" />
+        <button class="btn-search">추가</button>
+    </header>
+    
+    <section class="content">
+        <div class="filter-area">
+            <div id="importance">
+                <button data-value="-1" class="active">모두</button>
+                <button data-value="0">매우중요</button>
+                <button data-value="1">중요</button>
+                <button data-value="2">보통</button>
+            </div>
+            <div id="status">
+                <button data-status="-1" class="active">모두</button>
+                <button data-status="true">완료</button>
+                <button data-status="false">미완료</button>
+            </div>
+        </div>
+        <div class="list-area">
+            <ul class="list">
+            </ul>
+        </div>
+    </section>
+
+    <!-- jQuery -->
+    <script type="text/javascript" charset="utf-8" src="./js/lib/jquery-1.9.1.min.js"></script>
+    <!-- 드래그앤 드롭을 위한 jQuery UI. 필요한 module 만 build해서 추가함 -->
+    <script type="text/javascript" charset="utf-8" src="./js/lib/jquery-ui-1.12.1.min.js"></script>
+    <!-- jQuery UI에 touch event 사용 가능하게 하는 plugin-->
+    <script type="text/javascript" charset="utf-8" src="./js/lib/jquery.ui.touch-punch.min.js"></script>
+    <!-- custom library -->
+    <script type="text/javascript" charset="utf-8" src="./js/lib/lib.js"></script>
+    <!-- Data 관련 controller -->
+    <script type="text/javascript" charset="utf-8" src="./js/data.controller.js"></script>
+    <!-- Main controller -->
+    <script type="text/javascript" charset="utf-8" src="./js/main.controller.js"></script>
+</body>
+</html>

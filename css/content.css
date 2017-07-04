@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+body {background:#ededed}
+wrap:after {content:"";display:block;clear:both;height:0;visibility:hidden}
+wrap.content:after{content:"";display:block;clear:both;height:0;visibility:hidden}
+wrap {position:relative}
+.content {min-width:320px;width:100%;margin:40px auto 0;position:relative;}
+
+/* input-area */
+.input-area {z-index:999;background:#fff;position:fixed;top:0;left:0;padding:8px 80px;width:100%;height:43px;border-top:1px solid #dfe2e6;border-bottom:2px solid #dfe2e6;box-sizing:border-box;z-index:100;/* -moz-box-shadow:0px 2px 5px #ccc;-webkit-box-shadow:0px 2px 5px #ccc;box-shadow:0px 2px 5px #ccc; */}
+.input-area:after {content:"";display:block;clear:both;height:0;visibility:hidden}
+.input-area .input-text {display:block;position:relative;width:100%;height:26px;border-radius:5px;background-color:#fff;box-sizing:border-box}
+.input-area .input-text:after {content:'';display:block;position:absolute;top:9px;left:10px;width:16px;height:16px}
+.input-area .input-text /*input*/ {padding:2px 0 2px 5px;margin:0;width:100%;height:100%;line-height:30px;font-size:16px;border:0 none;outline:0 none;display:inline-block;}
+.input-area .input-text .placeholder {position:absolute;top:7px;left:10px;font-size:14px;color:#a9a9a9;font-weight:900}
+.input-area .btn-search {display:block;position:absolute;top:0;right:0px;background:#f27935;width:80px;height:40px;color:#fff}
+.input-area .btn-search span {line-height:40px;display:block;background:#f27935;width:80px;height:40px;color:#fff}
+
+select::-ms-expand {display:none;}
+.input-area .selectbox {position:absolute;display:inline-block;left:10px;top:8px;cursor:pointer}
+.input-area .selectbox:after {content:"";position:absolute;display:inline-block;width:16px;height:100%;background:url(../img/ico_selectbox.png) no-repeat center;background-size:16px;top:0px;right:0px}
+.input-area .selectbox select {width:60px;font-size:10px;cursor: pointer}
+
+/* filter-area */
+.filter-area {padding:10px}
+.filter-area > div {margin:4px}
+.filter-area button {padding:3px 4px;border:1px solid #c9c9c9;background:#fff;color:#000}
+.filter-area button.active {background:#f95000;color:#fff;border-color:#f95000}
+
+/* list-area */
+.list-area {position:relative;/*border-top:7px solid #f0f0f0*/}
+.list-area ul:after {content:"";display:block;clear:both;visibility:hidden}
+.list-area ul li {position:relative;border-bottom:1px solid #e9eaec;padding:10px 50px 10px 40px;letter-spacing:-0.05em;background:#fff}
+div.todo-check {cursor:pointer;display:block;color:#585c67}
+input[type=checkbox] {display: none}
+input[type=checkbox] + label{display:inline-block;cursor:pointer;position:relative;padding-left:25px;margin-right:15px}
+input[type=checkbox] + label:before {content:"";display:inline-block;width:20px;height:20px;position:absolute;left:0;bottom:-4px;vertical-align:middle;background:url(../img/ico_off.png) no-repeat;/*background-position:-10px 0;border-radius:3px;-webkit-border-radius:3px;-moz-border-radius:3px;*/background-size: 20px}
+input[type=checkbox]:checked + label:before {width:20px;height:20px;background:url(../img/ico_on.png) no-repeat;line-height:18px;background-size:20px}
+.list-area ul li div.todo-tit {font-size:16px;color:#161616;font-weight:bold}
+.selected {color:#807a7a;text-decoration:line-through}
+
+.list-area ul li div.todo-check {display:inline-block;position:absolute;left:10px;top:50%;margin-top:-10px;width:20px;height:20px}
+.list-area ul li small {display:block;color:#a5a5a5}
+.list-area ul li div.drag-area {position:absolute;top:0px;bottom:0px;width:40px;right:0px;border-left:1px solid #ddd;cursor:pointer;/*background:#bebebe;*/}
+.list-area ul li div.drag-area:before {content:"";display:block;width:40px;height:100%;background:url(../img/ico_drag.png) no-repeat center}
